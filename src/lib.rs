@@ -28,6 +28,9 @@ mod tests {
     #[test]
     fn test_client_creation() {
         let client = PutIoClient::new("test_token".to_string());
-        assert_eq!(client.get_download_url(123), "https://api.put.io/v2/files/123/download?oauth_token=test_token");
+        assert_eq!(
+            client.get_download_url(123),
+            "https://api.put.io/v2/files/123/download?oauth_token=test_token"
+        );
     }
 }
